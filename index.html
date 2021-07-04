@@ -2,42 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Google</title>
 
 
     <style>
       body {
-          min-height: 150vh;
+          max-height: 100vh;
           font-family: Arial, sans-serif;
           font-size: 14px;
           color: #5F6368;
       }
 
+      footer{
+          position: fixed;
+          left: 0px;
+          bottom: 0px;
+          width: 100vw;
+          background: #f2f2f2;
+      }
 
-      #navbar {
-        position: fixed;
-        bottom: 0px;
-        left: 0px;
-        width: 100%;
-        background: #f2f2f2;
+       nav {
+          display: flex;
+          justify-content: space-between;
+          padding: 15px 0px 15px 0px;
+       }
+
+      ul {
+        margin: 0 5px 0 0px;
       }
-      nav ul {
-        margin: 0px;
-        padding: 5px 0px 5px 30px;
-      }
-      nav li {
+
+      li {
          display: inline;
-         margin-right: 20px;
+         margin: 15px 15px 15px 15px;
+      }
+
+      #country-bar{
+          border-bottom-style: solid;
+          border-bottom-width: 1px;
+          border-bottom-color: lightgrey;
+          font-size: 15px;
+      }
+
+      #navbar-bottom{
+
       }
       a {
-        text-decoration: none;
+          color: #70757a;
+          text-decoration: none ;
       }
 
       .logo {
           display: block;
           margin-left: auto;
           margin-right: auto;
-          padding-top: 40%;
+          padding-top: 30vh;
       }
 
       .search-bar {
@@ -73,6 +91,17 @@
           color: #5F6368;
       }
 
+      .right {
+
+      }
+
+      .search-bar-and-icons{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+      }
+
 
 
     </style>
@@ -80,28 +109,41 @@
 
 
 <body>
+
+<div class="">
     <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
-    <input class="search-bar">
+    <div class="search-bar-and-icons">
+        <input class="search-bar">
+        <img class="material-icons-outlined" src="images/search_black_24dp.svg" alt="">
+        <img class="material-icons-outlined" src="images/mic_black_24dp.svg" alt="">
+    </div>
+
     <div class="search-buttons-box">
         <input type="button" class="search-buttons" value="Google Search">
         <input type="button" class="search-buttons" value="I'm Feeling Lucky">
     </div>
+</div>
 
+<footer>
+    <nav id="country-bar">
+        <ul>
+            <li><a href="">Australia</a></li>
+        </ul>
+    </nav>
 
-
-
-<div>
-    <nav id="navbar">
+    <nav id="navbar-bottom">
         <ul>
             <li><a href="">Advertising</a></li>
             <li><a href="">Business</a></li>
             <li><a href="">How Search works</a></li>
-            <li><a href="">Privacy</a></li>
-            <li><a href="">Terms</a></li>
-            <li><a href="">Settings</a></li>
+        </ul>
+        <ul>
+            <li><a class="right" href="">Privacy</a></li>
+            <li><a class="right" href="">Terms</a></li>
+            <li><a class="right" href="">Settings</a></li>
         </ul>
     </nav>
-</div>
+</footer>
 
 
 
